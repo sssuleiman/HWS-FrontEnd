@@ -1,0 +1,54 @@
+.grid-container {
+    margin: 20px;
+  }
+  
+  .dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+  
+  .slider-frame{
+    padding: 0px;
+    background-color: floralwhite;
+    margin-top: 20px;
+    margin-left: 360px;
+    width: 1200px;
+    height: 800px;
+    overflow: hidden;
+  }
+
+  
+  .img-container{
+    float: left;
+    position: relative;
+    width: 1200px;
+    height: 800px;
+  }
+  
+  /* END OF ANIMATION */
+  
+  
+  .more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+  .dashboard-card-content {
+    text-align: center;
+  }
+  
+  
+   /* updation of the page */
+   .page{
+    color: white;
+    padding: 0  1rem;
+    background: #f1f5f9;
+  }
+  page_box{
+    min-height: 90%;
+  }
+  

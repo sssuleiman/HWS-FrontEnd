@@ -1,0 +1,24 @@
+<p>admin-layout works!</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>SN</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Description</th>
+            <th>imageUrl</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees;let i = index">
+            <td>{{i+1}}</td> 
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.jobTitle}}</td>
+            <td>{{employee.imageUrl}}</td>
+            <td>{{employee.status}} </td>
+        </tr>
+    </tbody>
+</table>

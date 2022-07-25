@@ -1,0 +1,49 @@
+
+<h5><u><i>Demo to create search bar in Angular material!! </i></u></h5>
+<form class="example-form">
+<mat-form-field class="example-full-width">
+<span matPrefix> </span>
+<input type="tel" matInput placeholder="Search" name= "search" [(ngModel)]= "search">
+<button matSuffix mat-button><mat-icon >search</mat-icon></button>
+</mat-form-field>
+<br/>
+{{search}}
+</form>
+
+
+<div class="grid-container">
+    <h1 class="mat-h1">Home Dashboard</h1>
+    <h2 style="rotate: 3px;">Welcome to the House Workers System</h2>
+    <mat-grid-list cols="2" rowHeight="350px">
+      <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>
+              {{card.title}}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content">
+            <div style="background-color: rgb(125, 125, 178);">Card Content Here
+              <p>
+                A nanny is a person who provides child care. Typically, this care is given within the children's family setting. Throughout history, nannies were usually servants in large households and reported directly to the lady of the house. Today, modern nannies, like other domestic workers, may live in or out of the house, depending on their circumstances and those of their employers. There are many[quantify] employment agencies that specialize in childcare. Nannies in many[quantify] areas are a sought after member of the workforce. Many[quantify] nannies become a part of their family's household. Although previously[when?] looked at as a lesser-than job[by whom?], today's demand has made it a popular and valued addition to the lives of the family's household[opinion].
+
+Nannies differ slightly from other child care providers. A childminder works out of their own home, operating as a small business. In America, childminders are often advertised as a daycare. Depending on the country the childminder or daycare is in, government registration may or may not be required. Within the UK, a childminder must be Ofsted registered, hold a current paediatric first aid qualification, public liability insurance and follow the EYFS. A mother's helper is someone who may live in or out of the household, and assists the person of the house with general chores as well as caring for the children. The term au pair usually refers to a young person, who comes from abroad to live with the host family and learn the local culture and language, while helping care for the children. A governess concentrates on educating children inside their own home, and a kindergarten or schoolteacher does the same, but in a school environment.
+
+Even though there are no legal requirements to be considered a nanny, families may require a background check or a CPR certification. Families may also look for other special skills in a nanny, such as being bilingual or having early childhood development coursework done. Nannies help play a key role in a child's development by providing care. 
+              </p>
+              <img src="../assets/images/laundry.jpeg" alt="">
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list> 
+
+  
+  <div class="container-fluid page">
+    <div class="page_box p-3 mt-2">Home</div>
+      <div class="page-content-shadow p-3 position-relative">
+        <div class="page_content-data position-absolute text-center">
+          home content goes here
+        </div>
+      </div>
+  </div>
