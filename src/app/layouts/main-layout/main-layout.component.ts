@@ -9,6 +9,9 @@ import { Observable, map, shareReplay } from 'rxjs';
 })
 export class MainLayoutComponent implements OnInit {
 
+
+  opened=false;
+  closed=true;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
     map(result => result.matches),

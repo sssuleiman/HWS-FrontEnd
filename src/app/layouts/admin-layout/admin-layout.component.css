@@ -1,0 +1,33 @@
+/* .table{
+    margin-trim: 10px;
+} */
+table,
+th,
+td {
+    border: 1px solid #666;
+}
+
+table {
+    width: 60%;
+    height: 20%;
+    border-collapse: collapse;
+}
+th,td{
+    text-align: left;
+}
+
+/* div.grid-table {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: red; 
+    height: 90vh;
+    width: 100%; 
+} */
+div{
+    /* background-color: rgb(37, 94, 94); */
+}
+grid-table {    
+    padding-left: 20%;
+    /* height: fit-content; */
+}

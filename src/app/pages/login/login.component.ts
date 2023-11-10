@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
    ngOnDestroy(): void {
      console.log('login destroyed.');
    }
+   
    ngOnInit(): void {
      this.userForm = new FormGroup({
          email: new  FormControl(null,[Validators.required,Validators.email]),  

@@ -15,6 +15,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { CardComponent } from './components/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -33,6 +34,7 @@ import {MatDrawerContent} from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './service/employee.service';
+
 
 @NgModule({
   declarations: [
@@ -70,6 +72,7 @@ import { EmployeeService } from './service/employee.service';
     MatGridListModule,
     MatSidenavModule,
     MatDialogModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

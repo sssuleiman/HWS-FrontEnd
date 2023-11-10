@@ -1,54 +1,87 @@
 .grid-container {
-    margin: 20px;
-  }
-  
-  .dashboard-card {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-  }
-  
-  .slider-frame{
-    padding: 0px;
-    background-color: floralwhite;
-    margin-top: 20px;
-    margin-left: 360px;
-    width: 1200px;
-    height: 800px;
-    overflow: hidden;
-  }
+  margin: 20px;
+}
 
-  
-  .img-container{
-    float: left;
-    position: relative;
-    width: 1200px;
-    height: 800px;
-  }
-  
-  /* END OF ANIMATION */
-  
-  
-  .more-button {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-  }
-  
-  .dashboard-card-content {
-    text-align: center;
-  }
-  
-  
-   /* updation of the page */
-   .page{
-    color: white;
-    padding: 0  1rem;
-    background: #f1f5f9;
-  }
-  page_box{
-    min-height: 90%;
-  }
-  
+.dashboard-card {
+  /* position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px; */
+  /* background-color: whitesmoke; */
+}
+.container{
+  padding:auto;
+  margin: 15px;
+}
+.slider-frame {
+  padding: 0px;
+  background-color: floralwhite;
+  margin-top: 20px;
+  margin-left: 360px;
+  width: 1200px;
+  height: 800px;
+  overflow: hidden;
+}
+
+
+.img-container {
+  float: left;
+  position: relative;
+  width: 1200px;
+  height: 800px;
+}
+
+/* END OF ANIMATION */
+
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+/* .dashboard-card-content {
+  text-align: center;
+} */
+
+
+/* updation of the page */
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row: 2;
+  grid-column-gap: 0.8em;
+  grid-row-gap: 0.92em;
+  max-width: 1300px;
+  width: 100%;
+  margin: 5em auto 0;
+  justify-content: space-between;
+}
+
+.main>div.images {
+  width: 350px;
+  height: 350px;
+  box-shadow: 2px 3px 15px var(--darkMode);
+  border-radius: 4%;
+  background-color: transparent;
+}
+
+.main>div.images>img {
+  width: 350px;
+  height: 350px;
+  border-radius: 4%;
+}
+
+div.images>img:hover {
+  /* transform: scale(1.05) translate(-25px, -17px) rotate(45deg); */
+  border-radius: 50%;
+  box-shadow: -25px -17px 15px yellow, 25px 17px 15px var(--wishBlue),
+    25px 0 15px var(--wishRed), -25px 0 15px var(--wishGreen);
+}

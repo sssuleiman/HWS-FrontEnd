@@ -1,64 +1,76 @@
 <mat-drawer-container>
-    <mat-drawer mode="side" opened>
-      <mat-nav-list>
-        <div class="logo py-4">
-          <img src="../../../assets/images/hhh.png" alt="house logo">
-        </div>
-        <mat-divider></mat-divider>
-        <h2>Categories...</h2>
-        <a mat-list-item routerLink="mainlayout/users">
-          <mat-icon>fa-users</mat-icon>
-          <i class='fas fa-users'></i>
-          user
-        </a>
-        <a mat-list-item routerLink="mainlayout/admin-layout">admin</a>
-        <a mat-list-item routerLink="mainlayout/list-users">list</a>
-        <a mat-list-item routerLink="mainlayout/home">
-          <mat-icon>home</mat-icon> Home
-        </a>
-        <a mat-list-item routerLink="mainlayout/create-user">create</a>
-      </mat-nav-list>
-    </mat-drawer>
-  <mat-drawer-content>
-    <div>
-      <div class="row">
-        <div class="col">
-          <mat-toolbar>
-            <mat-toolbar-row class="justify-content-between">
-              <mat-icon>menu</mat-icon>
-              <div class="row">
-                <div class="col-4"><a routerLink="mainlayout/home">Home</a> </div>
-                <div class="col-4">About</div>
-                <div class="col-4">contact</div>
-              </div>
-
-              <div class="row mr-2 ml-auto">
-                <ul>
-                  <li>
-                    <button  mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
-                      <img id="logout" src="../../../assets/images/hhh.png" alt="image" class="user-image mr-1 p-2" />
-                      username
-                     <mat-icon  class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
-                    </button>
-                  </li>
-                  <li>
-                    <mat-menu #menu="matMenu">
-                      <button routerLink="/" mat-menu-item>
-                        <mat-icon >exit_to_app</mat-icon>
-                        Logout
-                      </button>
-                    </mat-menu>
-                  </li>
-                </ul>
-              </div>
-
-            </mat-toolbar-row>
-          </mat-toolbar>
-        </div>
+  <mat-drawer mode="side" [(opened)]="opened">
+    <mat-nav-list>
+      <div class="logo py-1">
+        <img src="../../../assets/images/hhh.png" alt="house logo" />
       </div>
-    </div>
-    <!-- My Content Here -->
-    <div style="padding: 15px">
+      <mat-divider></mat-divider>
+      <h2>Categories...</h2>
+
+      <a mat-list-item routerLink="mainlayout/home">
+        <mat-icon>home</mat-icon> Home
+      </a>
+      <a mat-list-item routerLink="mainlayout/users">
+        <mat-icon>account_circle</mat-icon>
+        <!-- <mat-icon>fa-users</mat-icon> -->
+        <!-- <i class='fas fa-users'></i> -->
+        user
+      </a>
+      <a mat-list-item routerLink="mainlayout/admin-layout"
+        ><mat-icon>preview</mat-icon>admin</a
+      >
+      <a mat-list-item routerLink="mainlayout/list-users"
+        ><mat-icon>list</mat-icon>list</a
+      >
+      <!-- <a mat-list-item routerLink="mainlayout/create-user">create</a> -->
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar>
+      <button (click)="opened = !opened">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="space"></div>
+      <div style="display: flex; flex-direction: row">
+        <button>
+          <a routerLink="mainlayout/home">Home</a>
+        </button>
+        <button>About</button>
+        <button>contact</button>
+      </div>
+      <div class="space"></div>
+      <div class="dropstart">
+        <ul>
+          <li >
+            <button
+              mat-button
+              [matMenuTriggerFor]="menu"
+              class="user mt-2 d-flex align-items-center"
+            >
+              <img
+                id="logout"
+                src="../../../assets/images/hhh.png"
+                alt="image"
+                class="user-image mr-1 p-2"
+              />
+              username
+              <mat-icon class="user-image-icon ml-1"
+                >keyboard_arrow_down</mat-icon
+              >
+            </button>
+          </li>
+          <li>
+            <mat-menu  #menu="matMenu">
+              <button routerLink="/" mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                Logout
+              </button>
+            </mat-menu>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <div class="container">
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>

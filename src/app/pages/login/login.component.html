@@ -1,35 +1,68 @@
-<div class="container-fluid color" style="height: 100%;">
-    <div class="row" id="layer">
-      <h2><i class="fa fa-home fa-4x text-danger"></i> House-workers system</h2>
-    </div>
-    <div >
-      <div class="container">
-        <div class="card">
-          <div class="text-center">
-            <h1>Login</h1>
-            <h5>please enter email and passwd !!</h5>
-          </div>
-          <form > 
-          <form [formGroup]="userForm">   
-              <div class="form-group mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" NgModule />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
+<div class="container-fluid color" style="height: 100%">
+  <div class="row" id="layer">
+    <h2><i class="fa fa-home fa-4x"></i> House-workers system</h2>
+  </div>
+  <div>
+    <div class="container">
+      <div class="cards">
+        <div class="text-center">
+          <h1>Login</h1>
+          <h4>please enter your email and passwd !!</h4>
+        </div>
+        <div>
+          <form [formGroup]="userForm">
+            <div class="row">
+              <div class="form-group col-25">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
               </div>
-              <div class="mb-3 form-group">
+              <div class="col-45">
+                <input
+                  formControlName="email"
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  NgModule
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25 form-group">
                 <label for="password" class="form-label">Password</label>
-                <input formControlName="password" placeholder="*******" class="form-control" id="passwd" />
               </div>
-              <button routerLink="mainlayout" [disabled]="userForm.invalid" (click)="onLogin()" type="submit" class="btn btn-primary mb-2">
-                Login
-              </button>
-            </form> 
-            <a style="color:rgb(244, 247, 250); margin-top: 20px;" routerLink="pages/sigup" type="submit">
-              You dont have account? Create Here</a>
+              <div class="col-45">
+                <input
+                  formControlName="password"
+                  placeholder="*******"
+                  class="form-control"
+                  id="passwd"
+                  type="password"
+                />
+              </div>
+            </div>
+
+            <button
+            id="btn"
+              routerLink="mainlayout"
+              [disabled]="userForm.invalid"
+              (click)="onLogin()"
+              type="submit"
+              class="btn btn-primary mb-2 row"
+            >
+              Login
+            </button>
           </form>
+          <a
+            style="color: rgb(244, 247, 250); margin-top: 20px"
+            routerLink="pages/sigup"
+            type="submit"
+          >
+            You dont have account? Create Here</a
+          >
         </div>
       </div>
     </div>
-    </div>
+  </div>
+</div>
